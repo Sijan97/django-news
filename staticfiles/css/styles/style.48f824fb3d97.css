@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: linear-gradient(to top left, rgb(33, 33, 33), rgb(206, 109, 109)), url("../images/header.f7f0644a5089.jpg");
+}

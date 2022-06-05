@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+/* 
+
+Primary font: Lato
+Default colors:
+    primary button color: #06b6d4
+    primary button hover: #0e7490
+    primary dark font: #353535
+    primary light font: #f5f5f4
+
+    red button: #ef4444
+    red button hover: #b91c1c
+
+    yellow button: #fde047
+    yellow button hover: #eab308
+*/
+
+/* PAGE SETUP */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+/* LAYOUT */
+
+body {
+    color: #353535;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.59), rgba(255, 255, 255, 0)), url(../images/header.jpg);
+    background-attachment: fixed;
+    height: 100vh;
+    color: #353535;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+footer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.59), rgba(255, 255, 255, 0)), url(../images/footer.jpg);
+    background-attachment: fixed;
+    height: 20vh;
+}
+
+.register-body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.59), rgba(255, 255, 255, 0)), url(../images/register.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.register-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blog-content {
+    transition: all 0.7s;
+}
+
+.divider {
+    display: block;
+    height: 2px;
+    background-color: #f5f5f4;
+    content: " ";
+    width: auto;
+    margin: 0 auto;
+}
+
+.blog-content {
+    position: relative;
+    border: none;
+}
+
+.blog-content::before,
+.blog-content::after {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    content: "";
+    z-index: 10;
+}
+
+.blog-content::before {
+    top: 0;
+    left: 0;
+    border-top: 5px solid #16a34a;
+    border-left: 5px solid #4ade80;
+}
+
+.blog-content::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 5px solid #0d9488;
+    border-right: 5px solid #2dd4bf;
+}
+
+
+.banner {
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.main-content {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.btn-edit {
+    background-color: #06b6d4;
+}
+
+.btn-edit:hover {
+    background-color: #0e7490;
+    color: #f5f5f4;
+}
+
+.btn-delete {
+    background-color: #ef4444;
+}
+
+.btn-delete:hover {
+    background-color: #b91c1c;
+    color: #f5f5f4;
+}
+
+.btn-back {
+    background-color: #fde047;
+}
+
+.btn-back:hover {
+    background-color: #eab308;
+    color: #f5f5f4;
+}
+
+.edits {
+    position: relative;
+    z-index: 12;
+}
+
+.btn-user,
+.btn-browse {
+    background-color: #06b6d4;
+    border-radius: 0.5rem;
+}
+
+.btn-user:hover,
+.btn-browse:hover {
+    background-color: #0e7490;
+    color: #f5f5f4;
+}
+
+.user-name {
+    color: inherit;
+}
+
+.user-name:hover {
+    color: #f5f5f4;
+}

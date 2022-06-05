@@ -1,0 +1,1 @@
+let blogs = document.querySelectorAll('.blog-content');
