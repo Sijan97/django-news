@@ -18,11 +18,10 @@
         </head>
 
         <body>
-            {% block header %}
-            <header class="position-relative">
-                <nav class="navbar navbar-expand-lg navbar-dark shadow-none sticky-top">
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-dark shadow-none fixed-top">
                     <div class="container">
-                        <a class="navbar-brand fs-2" href="#">Newspaper</a>
+                        <a class="navbar-brand fs-2" href="/">Newspaper</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +29,7 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             {% if user.is_authenticated %}
-                            <ul class="nav ms-auto mb-2 mb-lg-0 btn-user">
+                            <ul class="nav ms-auto mb-2 mb-lg-0 btn-default">
                                 <li class="nav-item dropdown">
                                     <a class="nav-link active dropdown-toggle user-name" href="#" id="navbarDropdown"
                                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -59,7 +58,9 @@
                         </div>
                     </div>
                 </nav>
-                <div class="container">
+
+                {% block header %}
+                <div class="header-banner">
                     <div class="hero-text bg-light w-50 bg-opacity-75 p-4 rounded">
                         <h1 class="display-3 pb-1">Keep up with the world.</h1>
                         <span class="fs-3">Stay updated.</span>
@@ -67,11 +68,11 @@
                             Get your daily news update right where you are. Browse the feeds and read amazing articles
                             to keep up with what's going on this world today. Always be ready, always stay updated.
                         </p>
-                        <a href="{% url 'article_list' %}" class="btn btn-browse">Let's roll</a>
+                        <a href="{% url 'article_list' %}" class="btn btn-default">Let's roll</a>
                     </div>
                 </div>
+                {% endblock header %}
             </header>
-            {% endblock header %}
 
             <main>
                 {% block content %}

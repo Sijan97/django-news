@@ -14,6 +14,7 @@
 {% block content %}
 <section class="blog-content container mb-4 p-3">
     <p class="lead mb-2">by {{ article.author }} | {{ article.date }}</p>
+
     {% comment %} <div class="banner h-50 position-relative mb-2"
         style="background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url({{ article.cover.url }})">
         <h2 class="text-light display-1 position-absolute top-50 start-50 translate-middle">
@@ -26,7 +27,7 @@
     </div>
 
     <p class="text-center edits">
-        <a href="{% url 'article_edit' article.pk %}" class="btn btn-edit">Edit</a> |
+        <a href="{% url 'article_edit' article.pk %}" class="btn btn-default">Edit</a> |
         <a href="{% url 'article_delete' article.pk %}" class="btn btn-delete">Delete</a> |
         <a href="{% url 'article_list' %}" class="btn btn-back">Back to all articles</a>
     </p>
