@@ -19,21 +19,31 @@
 
         <body>
             <header>
-                <nav class="navbar navbar-expand-lg navbar-dark shadow-none fixed-top">
+                <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
                     <div class="container">
-                        <a class="navbar-brand fs-2" href="/">Newspaper</a>
+                        <a class="navbar-brand" href="/">
+                            <img src="{% static 'images/my_logo.png' %}" alt="Logo" class="img img-fluid">
+                        </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="container ms-5 collapse navbar-collapse" id="navbarSupportedContent">
                             {% if user.is_authenticated %}
-                            <ul class="nav ms-auto mb-2 mb-lg-0 btn-default">
+                            <ul class="nav nav-pills me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a href="{% url 'article_new' %}" class="btn btn-nav btn-outline-dark"
+                                        aria-current="page">Create
+                                        new blog</a>
+                                </li>
+                            </ul>
+                            <ul class="nav ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item dropdown">
                                     <a class="nav-link active dropdown-toggle user-name" href="#" id="navbarDropdown"
                                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        {{ user.username }}
+                                        <img class="rounded-circle" src="{{ user.profile.profile_pic.url }}"
+                                            height="55rem" alt="{{ user.username.capitalize }} Profile">
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li>
@@ -74,7 +84,7 @@
                 {% endblock header %}
             </header>
 
-            <main>
+            <main class="my-3">
                 {% block content %}
                 {% endblock content %}
             </main>
